@@ -1,0 +1,131 @@
+<div class="row ">
+  <div class="col-sm-12">
+    <div class="row bg-dark">
+      <div class="col-sm-6 p-5">
+        <h2 class="text-success">Welcome to user dashboard...</h2>
+      </div>
+      <div class="col-sm-6 d-flex flex-row-reverse p-5 ">
+
+        <button class="btn btn-info btn-lg text-white text-lg" (click)="logout()">Log Out</button>
+        <!-- <button class="btn btn-info btn-lg text-white text-lg mr" (click)="returnBook()">Return Book</button> -->
+        <a class="btn btn-info btn-lg text-white text-lg mr" (click)="com()">cart</a>
+        <button class="btn btn-info btn-lg text-white text-lg mr" (click)="show()">Showbooks</button>
+
+      </div>
+    </div>
+  </div>
+
+
+  <section class="col-sm-12 book_section bg text-white fs-4 fw-bold m-0">
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-md btn-success mrgnt" (click)="search()">Search Book</button>
+
+    </div>
+    <div class="grid-container">
+    <div *ngIf="searched" class="d-flex justify-content-center txt ">
+      <app-search-book></app-search-book>
+
+    </div>
+  </div>
+
+
+    <div class="row">
+      <div class="col-sm-4">
+        <h3 class="mrgn text-info">Filter details</h3>
+        <!-- filter by price -->
+        <div>
+          <button class="mrgn  btn btn-lg btn-primary" (click)="priceChange()">on price</button>
+          <div class="mrgn pd" *ngIf="price">
+            <input #i type="input">
+            <button class="btn btn1 btn-lg btn-secondary" (click)="pricee(i.value)">submit</button>
+          </div>
+        </div>
+        <div>
+          <button class="mrgn btn btn-lg btn-primary mt-2" (click)="authors()">Filter by author</button>
+
+
+          <!-- filter by author -->
+
+          <div class="mrgn pd" *ngIf="author">
+            <input #ii type="input">
+            <button class="btn btn1 btn-lg btn-secondary" (click)="authorFil(ii.value)">Submit</button>
+          </div>
+          <!-- <div class="mrgn">
+            <li *ngFor="let a of fil">
+              {{a}}
+            </li>
+          </div> -->
+
+        </div>
+
+
+
+        <div class="detail" *ngIf="selectedbook && select">
+          <h3 class="mrgn">{{selectedbook.name}} DETAILS</h3>
+          <p class="mrgn">Author: {{selectedbook.author}}</p>
+          <p class="mrgn">Price: {{selectedbook.price}}</p>
+        </div>
+
+      </div>
+      <div class="col-sm-5 d-flex justify-content-start " *ngIf="showBook">
+        <div class="p-4 grid-container">
+          <li *ngFor="let book of books">
+            <div class="row d-flex flex-column ">
+              <div class="col-sm-6">
+                <img src="{{book.image}}" alt="" width="200px" class="p-2">
+              </div>
+              <div class="col-sm-6 pt-2 ml-3">
+                <a [class.selected]="book === selectedbook" type="button" (click)="onSelect(book)">
+                  <span class="name">{{book.name}}</span>
+                </a>
+              </div>
+            </div>
+            <button class="delete btn btn-danger btn-lg text-white" (click)="cart(book)">Add to cart</button>
+          </li>
+        </div>
+      </div>
+
+      <div class="col-sm-5 d-flex justify-content-start grid-container">
+        <div *ngIf="showFil" class="p-4">
+          <li *ngFor="let book of fil">
+            <div class="row d-flex flex-column ">
+              <div class="col-sm-6">
+                <img src="{{book.image}}" alt="" width="200px" class="p-2">
+              </div>
+              <div class="col-sm-6 pt-2 ml-3">
+                <a [class.selected]="book === selectedbook" type="button" (click)="onSelect(book)">
+
+                  <!-- <span class="badge">{{book.id}}</span> -->
+                  <span class="name">{{book.name}}</span>
+                </a>
+              </div>
+            </div>
+            <button class="delete btn btn-danger btn-lg text-white" (click)="cart(book)">Add to cart</button>
+          </li>
+        </div>
+      </div>
+
+      <div class="col-sm-3">
+        <div *ngIf="return">
+          <label class="text-info" for="new-Book">Book name: </label>
+          <input id="new-Book" #bookName />
+
+          <!-- (click) passes input value to add() and then clears the input -->
+          <button type="button" class="add-button btn btn-lg btn-secondary mt-2"
+            (click)="add(bookName.value); bookName.value=''">
+            Return book
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="d-flex justify-content-center mt-5">
+      <app-message></app-message>
+
+    </div> -->
+  </section>
+</div>
+
+
+
+<!-- CART SECTION -->

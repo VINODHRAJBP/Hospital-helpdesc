@@ -1,0 +1,29 @@
+
+.bg{
+    background-image: url(../../assets/images/dash.webp);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    height: 1000px;
+    width: 100%;
+    position: fixed; 
+}
+
+h1{
+    color: red;
+    padding-left: 40px;
+    justify-content: center;
+    padding-top: 15%;
+    font-size: 60px;
+    opacity: 0.6;
+
+}
+h3{
+    padding-left: 40px;
+    opacity: 0.6;  
+    
+}
+.btn{
+    padding: 25px 150px;
+    margin-left: 30%;
+    margin-top: 10%;
+ }

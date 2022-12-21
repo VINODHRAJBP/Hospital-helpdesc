@@ -1,0 +1,29 @@
+
+
+
+<h1>Login</h1>
+<h2>user</h2>
+<form [formGroup]="login" (ngSubmit)="getUser()">
+    <label >user name</label>
+    <input  type="email" name="email" formControlName="email" [(ngModel)]="em" >
+    <label >password</label>
+    <input type="password" name="pass" formControlName="pass" [(ngModel)]="pa">
+    <button type="submit" >login</button>
+  </form>
+  
+  
+  
+  <h1>Admin</h1>
+  <form [formGroup]="login" (ngSubmit)="getAdmin()">
+    <label >user name</label>
+    <input type="email" name="user" formControlName="email" [(ngModel)]="em1">
+    <label >password</label>
+    <input type="password" name="pass" formControlName="pass" [(ngModel)]="pa1">
+    <button>login</button>
+  </form>
+
+  <div *ngFor="let a of data">
+    <p>{{a.pass}}</p>
+    <p>{{a}}</p>
+
+  </div>

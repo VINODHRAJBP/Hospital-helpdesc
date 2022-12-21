@@ -1,0 +1,29 @@
+<div id="search-component d-flex justify-content-center">
+  <!-- <label for="search-box">Search book</label> -->
+  <input #s class="" (input)="search(s.value)" />
+  <!-- <input  #searchBox  (input)="search(searchBox.value)" class="form-control me-2 nav-link"  type="text" placeholder="Search"> -->
+
+</div>
+
+<div class="col-sm-4">
+  <div class="detail" *ngIf="selectedbook">
+    <h3 class="mrgn">{{selectedbook.name}} DETAILS</h3>
+    <p class="mrgn">Author: {{selectedbook.author}}</p>
+    <p class="mrgn">Price: {{selectedbook.price}}</p>
+  </div>
+
+
+<div class="d-flex justify-content-center">
+  <ul class="search-result">
+    <li *ngFor="let book of books$ | async">
+      <!-- <a routerLink="/detail/{{book.id}}"> -->
+      <img src="{{book.image}}" alt="">
+      <a [class.selected]="book === selectedbook" type="button" (click)="onSelect(book)">
+        <span class="name">{{book.name}}</span>
+      </a>
+      <!-- {{book.name}} -->
+      <!-- </a> -->
+    </li>
+  </ul>
+</div>
+</div>

@@ -1,0 +1,30 @@
+
+#loginBlock{
+    display: -moz-inline-box;
+}
+.form-text{
+    margin: 0px;
+    
+}
+.bg{
+    background-image: url("https://www.kindpng.com/picc/m/74-749760_abstract-digital-png-and-png-digital-technology-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mrgn-box{
+margin-top: 58px;
+margin-bottom: 60px;
+}
+.fadeIn {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0); /* ADDED - start x position as -50px */
+    cursor: pointer;
+    transition: 3s all ease-in-out;
+  }
+  
+  .fadeIn:hover {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); /* ADDED - move x to 0 on hover */
+  }
+
+  

@@ -1,0 +1,16 @@
+li{
+    list-style-type: none;
+    margin-left: -20px;
+}
+.mrgn{
+    margin-left: 30px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 10px;
+}
+.inp{
+   border-radius: 5px;
+   justify-content: center;
+}

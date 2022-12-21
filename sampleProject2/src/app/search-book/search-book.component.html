@@ -1,0 +1,29 @@
+<div id="search-component d-flex justify-content-center">
+  <!-- <label for="search-box">Search book</label> -->
+  <input #s class="inp" (keyup)="sea(s.value)" />
+  <!-- <input  #searchBox  (input)="search(searchBox.value)" class="form-control me-2 nav-link"  type="text" placeholder="Search"> -->
+
+</div>
+
+<div class="col-sm-8">
+  <div class="detail" *ngIf="selectedbook && select">
+    <h3 class="mrgn text-info"> <span class="text text-success">{{selectedbook.name}}</span></h3>
+    <p class="mrgn text-secondary">Author: <span class="text text-success">{{selectedbook.author}}</span> </p>
+    <p class="mrgn text-secondary">Price: <span class="text text-success">{{selectedbook.price}}</span> </p>
+  </div>
+
+
+  <div class="d-flex justify-content-center col-sm-12">
+    <ul class="search-result grid-container justify-content-center">
+      <div *ngFor="let book of book" class="m-3">
+        <!-- <a routerLink="/detail/{{book.id}}"> -->
+        <img src="{{book.image}}" width="140px" height="200px"><br>
+        <a [class.selected]="book === selectedbook" type="button" (click)="onSelect(book)">
+          <span class="name text-secondary lead">{{book.name}}</span>
+        </a>
+        <!-- {{book.name}} -->
+        <!-- </a> -->
+      </div>
+    </ul>
+  </div>
+</div>

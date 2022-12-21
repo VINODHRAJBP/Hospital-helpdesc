@@ -1,0 +1,32 @@
+.empty{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: rgb(196, 214, 196);
+    background-size: cover;
+}
+.empty1{
+    /* height: 1000vh; */
+    background: rgb(196, 214, 196);
+    background-position: fixed;
+    background-size: cover
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.mr{
+    margin-right: 10px !important;
+}
+.navbg{
+    background-color: rgb(67, 67, 79);
+}
+.inp{
+    height: 30px;
+    width: 40px;
+}

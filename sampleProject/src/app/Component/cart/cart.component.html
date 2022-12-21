@@ -1,0 +1,46 @@
+<div class="empty" *ngIf="selbook.length<1">
+    <div class="info">
+        <h1>Nothing in cart</h1>
+        <button class="btn btn-success" (click)="goBack()">Go Back</button>
+    </div>
+</div>
+<ng-container *ngIf="selbook.length>0" >
+    <button class="btn btn-success" (click)="goBack()">Go Back</button>
+    <div class="container">
+        <div class="card-table">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+<div class="grid-container">
+                        <ul *ngFor="let b of selbook">
+                            <th class="col-sm-6 ">
+                                <img src="{{b.image}}" alt="" width="100px" class=" shadow-lg mb-5 bg-white rounded">
+                            </th>
+                            <br>
+                            <!-- <img src="{{b.image}}" > -->
+                            <th>BookNAme: {{b.name}}</th><br>
+                            <th>AuthorName: {{b.author}}</th><br>
+                            <th>Price: {{b.price}}</th><br>
+
+                            <button (click)="remove(b)">-</button>
+                            <input type="text" value="{{b.count}}" (change)="add(b)">
+                            <!-- <p>Count: {{b.count}}</p> -->
+                            <button (click)="add(b)">+</button>
+                            <button class="btn mt-4 btn-danger" (click)="delete(b)">Remove Book</button>
+                        </ul>
+
+
+                        <h2>Total Price =Service Charge+Book Price: {{totalPrice}}</h2>
+                    </div>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mrgn ">
+        <app-message></app-message>
+      </div>
+</ng-container>
+
+
+

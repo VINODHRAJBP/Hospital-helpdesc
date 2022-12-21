@@ -1,0 +1,48 @@
+
+<div class="navbg">
+    <button class="btn btn-outline-info m-2 text-light " (click)="goBack()">Go Back</button>
+<a class="btn btn-outline-info text-light m-2">cart <span class="badge bg-warning">{{c}}</span></a>
+</div>
+<div class="empty" *ngIf="selbook.length<1">
+    <div class="empty ">
+        <h1>Nothing in cart</h1>
+        <button class="btn btn-outline-danger" (click)="goBack()">Go Back</button>
+    </div>
+</div>
+<ng-container *ngIf="selbook.length>0" >
+    <div class="empty1">
+    <div class="container empty1">
+        <div class="">
+            <table class="">
+                <thead>
+                    <tr>
+                        <div class="grid-container">
+                            <ul *ngFor="let b of selbook">
+                                <th class="col-sm-6 ">
+                                    <img src="{{b.image}}" alt="" width="80px" height="100px"
+                                        class=" shadow-lg mb-2 bg-white rounded">
+                                </th>
+                                <br>
+                                <!-- <img src="{{b.image}}" > -->
+                                <th>BookNAme: {{b.name}}</th><br>
+                                <th>AuthorName: {{b.author}}</th><br>
+                                <th>Price: {{b.price}}</th><br>
+
+                                <a (click)="remove(b)" class="btn btn-secondary">-</a>
+                                <input type="text" class="inp" value="{{b.count}}" (change)="add(b)">
+                                <!-- <p>Count: {{b.count}}</p> -->
+                                <a (click)="add(b)" class="btn btn-secondary">+</a>
+                                <!-- <button class="btn mt-4 btn-danger" (click)="delete(b)">Remove Book</button> -->
+                            </ul>
+                        </div>
+                    </tr>
+                </thead>
+            </table>
+            <h2>Total Price: {{totalPrice}}</h2>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mrgn ">
+        <app-message></app-message>
+      </div>
+      </div>
+</ng-container>

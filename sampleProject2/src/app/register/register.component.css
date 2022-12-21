@@ -1,0 +1,8 @@
+.bg{
+    background-image: url('../../assets/images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mrgn-box{
+margin-top: 160px;
+}

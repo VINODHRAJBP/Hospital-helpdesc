@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+<section class="bg">
+  <div *ngIf="addBook">
+    <form #i="ngForm" >
+    <input type="text" ngModel name="name" placeholder="name">
+    <input type="text" ngModel name="author" placeholder="author">
+    <input type="text" ngModel name="price" placeholder="price">
+    <input type="text" ng model name="count" placeholder="count">
+    <input type="text" ngModel name="image" placeholder="image">
+  </form>
+    <button (click)="add(i.value)" class="btn btn-success">add</button>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-md btn-success mrgn" (click)="search()">Search Book</button>
+
+  </div>
+  <div *ngIf="SearchBook" class="d-flex justify-content-center txt ">
+    <app-search-book></app-search-book>
+
+  </div>
+  <div>
+    <div class="row mt-4">
+      <div class="col-sm-4 mal">
+        <h3 class="text-primary">Filter details</h3>
+
+        <div class="mt-2 mb-4">
+          <button class="btn btn-md btn-success" (click)="priceChange()">on price</button>
+          <div class="mt-2" *ngIf="price">
+            <input #i type="input">
+            <button class="btn btn-secondary" (click)="pricee(i.value)">submit</button>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-md btn-success" (click)="authors()">Filter by author</button>
+          <div class="mt-2" *ngIf="author">
+            <input #ii type="input">
+            <button class="btn btn-md  btn-secondary" (click)="authorFil(ii.value)">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7 d-flex flex-row ">
+        <div *ngIf="ShowBookList" class="grid-container">
+          <li *ngFor="let book of books">
+            <div class="row">
+              <div class="col-sm-6 ">
+                <img src="{{book.image}}" alt="" width="100px" height="120px" class=" shadow-lg mb-5 bg-white rounded">
+              </div>
+
+              <div class="col-sm-6 mrgn ">
+                <p class="">{{book.id}}</p>
+                <p>Name: {{book.name}}</p>
+                <p>Author: {{book.author}}</p>
+                <p>Price: {{book.price}}</p>
+
+              </div>
+            </div>
+
+            <button class="btn btn-sm btn-danger" type="button" title="delete book" (click)="delete(book)"
+              *ngIf="deleteBook">x</button>
+          </li>
+        </div>
+
+
+
+        <div *ngIf="showfil" >
+          <li *ngFor="let book of fil" class="grid-container">
+            <div class="row">
+              <div class="col-sm-6 ">
+                <img src="{{book.image}}" alt="" width="100px" height="120px" class=" shadow-lg mb-5 bg-white rounded">
+              </div>
+
+              <div class="col-sm-6 mrgn ">
+                <p class="">{{book.id}}</p>
+                <p>Name: {{book.name}}</p>
+                <p>Author: {{book.author}}</p>
+                <p>Price: {{book.price}}</p>
+
+              </div>
+            </div>
+            <button class="btn btn-sm btn-danger" type="button" title="delete book" (click)="delete(book)"
+              *ngIf="deleteBook">x</button>
+          </li>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+
+
+
+</section>
