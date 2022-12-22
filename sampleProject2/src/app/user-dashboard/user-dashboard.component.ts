@@ -144,17 +144,25 @@ select=false
 
 
   // CART DETAILS
-  
+  button:book[]=[]
   cart(book: book) {
     this.valid.c++
     this.c=this.valid.c
     this.valid.addCart(book)
+    this.button=this.valid.cartbook
   }
 
 
   com() {
     this.rou.navigate(['/cart'])
   }
+
+remove(val:book){
+  this.valid.c=(this.c-val.count)
+  this.c=this.valid.c
+    this.valid.cartbook.splice(this.valid.cartbook.indexOf(val),1)
+}
+  
 
 }
 

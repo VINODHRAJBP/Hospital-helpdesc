@@ -1,8 +1,14 @@
 .bg{
-    background-image: url('../../assets/images/bg1.png');
+    /* background-image: url('../../assets/images/bg1.png'); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgb(161, 179, 196);
+    height: 100vh;
 }
 .mrgn-box{
 margin-top: 160px;
+}
+.bg1{
+    background-color: rgb(131, 117, 99);
+    /* color: aquamarine; */
 }

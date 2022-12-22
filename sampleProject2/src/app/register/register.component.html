@@ -1,20 +1,20 @@
 <section class="bg">
 
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row ">
             <div class="col-sm-12  d-flex justify-content-end mrgn-box ">
-                <form #i="ngForm" class="p-4 shadow-lg p-3 mb-5 opacity-75 rounded">
+                <form #i="ngForm" class="p-4 shadow-lg p-3 mb-5 opacity-75 rounded bg1">
 
-                    <h4 class="text-dark text-muted">Register</h4>
+                    <h4 class="text-light">Register</h4>
                     <hr />
 
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="email" class="form-label text-light">Email address</label>
                     <input type="email" #i="ngModel" email class="form-control" name="email" [(ngModel)]="email">
                     <span class="form-text text-danger" *ngIf="i.invalid">email format suggested: xyz@gmail.com</span>
                     <p class="form-text">We'll never share your email with anyone else.</p>
 
 
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <label for="exampleInputPassword1" class="form-label text-light">Password</label>
                     <input type="password" class="form-control" name="password" [(ngModel)]="password">
 
 

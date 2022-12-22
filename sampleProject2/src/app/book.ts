@@ -11,3 +11,6 @@ export interface admin{
     email:string,
     password:string
 }
+export interface buy{
+    data:string
+}

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ValidateService } from './validate.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class MessageService {
 
   messages: string[] = [];
   msg: string[] = []
+
   add(messages: string) {
     this.messages.unshift(messages)
   }

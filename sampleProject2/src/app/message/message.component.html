@@ -1,16 +1,16 @@
 <div>
 
-    <h2 class="text-lg text-info">Book log Details</h2>
+    <!-- <h2 class="text-lg text-info">Recent Purchases</h2> -->
     <div class="">
-      <button class="btn btn-lg btn-warning mr" (click)="message.Showlog()">Show log</button>
+      <button class="btn btn-lg btn-warning mr" (click)="valid.Showlog()">Recent Purchases</button>
   
-      <button class="btn btn-lg btn-danger mr" (click)="message.clearLog()">Clear log</button>
+      <!-- <button class="btn btn-lg btn-danger mr" (click)="valid.clearLog()">Clear log</button> -->
     </div>
   
   
-    <div *ngFor='let message of message.messages'> </div>
+    <!-- <div *ngFor='let message of valid.buyers'> </div> -->
     <div class="p-5">
-      <h6 class="text-danger font-weight-bold" *ngFor="let mmm of message.msg">{{mmm}}</h6>
+      <h6  class="text-danger font-weight-bold" *ngFor="let mmm of valid.msg">{{mmm}}</h6>
     </div>
   
   

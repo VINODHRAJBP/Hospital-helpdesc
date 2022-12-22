@@ -17,6 +17,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.c=this.valid.c
     this.books()
+    this.valid.buyersGet()
   }
   selbook: any = []
   val = 1;
@@ -93,6 +94,8 @@ c=0
       }
     }
   }
+
+  
 
 }
 

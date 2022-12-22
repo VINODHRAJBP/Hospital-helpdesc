@@ -5,20 +5,20 @@
             <div class="col-sm-12 mt-4">
                 <div class="row">
                     <div class="col-sm-6 mt-5 d-flex justify-content-center ">
-                        <form class="p-4 shadow-lg mb-5 opacity-100 rounded mrgn-box fadeIn" #i="ngForm">
+                        <form class="p-4 shadow-lg mb-5 opacity-100 rounded mrgn-box fadeIn bg1" #i="ngForm">
 
-                            <h4 class="text-dark text-muted">Admin Login</h4>
+                            <h4 class="text-light ">Admin Login</h4>
                             <hr />
                             <div class="">
-                                <label for="email" class="form-label">Email address</label>
+                                <label for="email" class="form-label lead text-warning">Email address</label>
                                 <input #v="ngModel" email class="form-control" name="email" [(ngModel)]="email">
                                 <span class="form-text text-danger" *ngIf="v.invalid">plz enter valid email</span>
-                                <p class="text-muted form-text">We'll never share your email with anyone else. </p>
-                                <label for="Password" class="form-label pt-3">Password</label>
+                                <p class="text-dark form-text">We'll never share your email with anyone else. </p>
+                                <label for="Password" class="form-label lead text-warning pt-3">Password</label>
                                 <input #ii="ngModel" type="password"  class="form-control" minlength="6" name="password"
                                     [(ngModel)]="password">
                                 <span *ngIf="ii.touched && ii.invalid">Min length 6 required</span><br>
-                                <button type="button" class="btn btn-success my-3" [disabled]="i.invalid"
+                                <button type="button" class="btn btn-outline-success text-light my-3" [disabled]="i.invalid"
                                     (click)="adminsignIn(i.value)">Login</button>
 
                                 <!-- <p> <a href="/register" class="text-decoration-none form-text fw-bolder">You need an
@@ -33,21 +33,21 @@
                     </div>
 
 
-                    <div class="col-sm-6 mt-5 d-flex justify-content-center">
-                        <form class="p-4 shadow-lg p-3 mb-5 opacity-100 rounded mrgn-box fadeIn" #a="ngForm">
+                    <div class="col-sm-6 mt-5 d-flex justify-content-center ">
+                        <form class="p-4 shadow-lg p-3 mb-5 opacity-100 rounded mrgn-box fadeIn bg1" #a="ngForm">
 
-                            <h4 class="text-dark text-muted">User Login</h4>
+                            <h4 class="text-light">User Login</h4>
                             <hr />
 
                             <div class="">
-                                <label for="email" class="form-label">Email address</label>
+                                <label for="email" class="form-label lead text-warning">Email address</label>
                                 <input type="email" #vv="ngModel"  email class="form-control" name="email" [(ngModel)]="userEmail">
                                 <span class="form-text text-danger" *ngIf="vv.invalid">plz enter valid email</span>
-                                <p class="text-muted form-text">We'll never share your email with anyone else. </p>
-                                <label for="Password" class="form-label pt-3">Password</label>
+                                <p class="text-dark form-text">We'll never share your email with anyone else. </p>
+                                <label for="Password" class="form-label lead text-warning pt-3">Password</label>
                                 <input type="password" #aa="ngModel" minlength="6" class="form-control" name="password" [(ngModel)]="userPassword">
                                 <span class="form-text text-danger" *ngIf="aa.invalid && aa.touched">Min length 6 required</span> <br>
-                                <button type="button" class="btn btn-success my-3" [disabled]="a.invalid" (click)="userLogin()">Login</button>
+                                <button type="button" class="btn btn-outline-success text-light my-3" [disabled]="a.invalid" (click)="userLogin()">Login</button>
 
                                 <p>
                                     <a href="" class="text-dark text-decoration-none form-text fw-bolder">Forgot
