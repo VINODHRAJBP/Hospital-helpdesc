@@ -38,14 +38,14 @@
           <hr class="text-secondary col-sm-5">
           <!-- filter by price -->
           <div>
-            <button class="mrgn btn btn-outline-secondary text-light " (click)="priceChange()">on price</button>
+            <button class="mrgn btn btn-outline-secondary text-light buttonnav" (click)="priceChange()">on price</button>
             <div class="mrgn pd" *ngIf="price">
               <input #i class="inpu" type="input">
               <button class="btn btn1 btn-sm btn-secondary text-warning" (click)="pricee(i.value)">submit</button>
             </div>
           </div>
           <div>
-            <button class="mrgn btn btn-outline-secondary text-light mt-2" (click)="authors()">Filter by
+            <button class="mrgn btn btn-outline-secondary text-light mt-2 buttonnav" (click)="authors()">Filter by
               author</button>
 
 
