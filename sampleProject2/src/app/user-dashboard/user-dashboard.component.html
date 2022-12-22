@@ -6,12 +6,12 @@
       </div>
       <div class="col-sm-6 d-flex flex-row-reverse p-4">
 
-        <a class="btn  btn-outline-warning text-secondary text-lg text-light" (click)="logout()">Log Out</a>
+        <a class="btn  btn-outline-warning text-secondary text-lg text-light buttonnav" (click)="logout()">Log Out</a>
         <!-- <button class="btn btn-info btn-lg text-white text-lg mr" (click)="returnBook()">Return Book</button> -->
-        <a class="btn btn-outline-warning  text-lg mr text-light" (click)="com()">cart <span
+        <a class="btn btn-outline-warning  text-lg mr text-light buttonnav" (click)="com()">cart <span
             class="badge bg-warning">{{c}}</span></a>
 
-        <a class="btn btn-outline-warning  text-lg mr text-light" (click)="show()">Showbooks</a>
+        <a class="btn btn-outline-warning  text-lg mr text-light buttonnav" (click)="show()">Showbooks</a>
 
       </div>
     </div>
@@ -38,14 +38,14 @@
           <hr class="text-secondary col-sm-5">
           <!-- filter by price -->
           <div>
-            <button class="mrgn btn btn-outline-secondary text-warning " (click)="priceChange()">on price</button>
+            <button class="mrgn btn btn-outline-secondary text-light " (click)="priceChange()">on price</button>
             <div class="mrgn pd" *ngIf="price">
               <input #i class="inpu" type="input">
               <button class="btn btn1 btn-sm btn-secondary text-warning" (click)="pricee(i.value)">submit</button>
             </div>
           </div>
           <div>
-            <button class="mrgn btn btn-outline-secondary text-warning mt-2" (click)="authors()">Filter by
+            <button class="mrgn btn btn-outline-secondary text-light mt-2" (click)="authors()">Filter by
               author</button>
 
 
@@ -104,23 +104,23 @@
         <div class="col-sm-8 d-flex justify-content-start " *ngIf="showBook">
           <div class="p-4 grid-container">
             <div *ngFor="let book of books">
-              <div class="row d-flex flex-column ">
+              <div class="row d-flex flex-column container ">
                 <div class="col-sm-8">
-                  <img src="{{book.image}}" alt="" width="120px" height="150px" class="p-2">
+                  <img src="{{book.image}}" alt="" width="120px" height="150px" class="p-2 image">
                 </div>
                 <div>
-                  <span type="button" (click)="onSelect(book)" class="text-light lead">
+                  <span type="button" (click)="onSelect(book)" class="text-light lead overlay">
                     {{book.name}}
                   </span>
                 </div>
               </div>
               <div *ngFor="let a of button">
                 <div *ngIf="book.name==a.name;then content">here is ignored</div>
-                <ng-template #content> <p class="delete btn btn-danger btn-lg text-white" (click)="remove(book)">Remove</p></ng-template>
+                <ng-template #content> <p class="delete btn btn-danger btn-lg text-white buttons" (click)="remove(book)">Remove</p></ng-template>
                 <!-- <div *ngIf="book.name==a.name;then i else"></div> -->
                 <!-- <ng-component #i  class="delete btn btn-danger btn-lg text-white" (click)="cart(book)">remove</ng-component><br><br> -->
               </div>
-              <button   class="delete btn btn-danger btn-lg text-white" (click)="cart(book)">Add to cart</button>
+              <button   class="delete btn btn-danger btn-lg text-white button" (click)="cart(book)">Add to cart</button>
               <!-- <a class="delete btn btn-danger btn-sm text-white"><span class="lead">{{button}}</span> </a> -->
             </div>
           </div>

@@ -2,7 +2,7 @@
     /* background-image: url('../../assets/images/bg1.png'); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgb(161, 179, 196);
+    background-color: rgb(211, 220, 228);
     height: 100vh;
 }
 .mrgn-box{
@@ -12,3 +12,8 @@ margin-top: 160px;
     background-color: rgb(131, 117, 99);
     /* color: aquamarine; */
 }
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

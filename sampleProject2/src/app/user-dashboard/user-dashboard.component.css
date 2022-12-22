@@ -53,3 +53,112 @@ margin:30px 10px;
     width:350px;
      height:300px;
 }
+
+
+/* Animation */
+.button {
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+  }
+  @keyframes glowing {
+    0% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+    50% {
+      background-color: #49e819;
+      box-shadow: 0 0 20px #49e819;
+    }
+    100% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+  }
+  .button {
+    animation: glowing 1300ms infinite;
+  }
+/*  */
+  .buttons {
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+  }
+  @keyframes glowings {
+    0% {
+      background-color: #a80505;
+      box-shadow: 0 0 5px #a80505;
+    }
+    50% {
+      background-color: #a80505;
+      box-shadow: 0 0 20px #a80505;
+    }
+    100% {
+      background-color: #a80505;
+      box-shadow: 0 0 5px #a80505;
+    }
+  }
+  .buttons {
+    animation: glowings 1300ms infinite;
+  }
+
+
+
+  /*  */
+  .buttonnav:active {
+    background-color: #4f554f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+  /* image */
+  .container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  /* width: 100%; */
+  /* height: auto; */
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #252020; 
+  width: 100px;
+  height: 100px;
+  transition: .5s ease;
+  opacity:0;
+  color: rgb(27, 20, 20);
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}

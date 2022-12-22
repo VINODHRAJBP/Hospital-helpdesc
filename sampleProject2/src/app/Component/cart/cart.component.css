@@ -8,10 +8,11 @@
     background-size: cover;
 }
 .empty1{
-    /* height: 1000vh; */
+    /* height: 100vh; */
     background: rgb(196, 214, 196);
     background-position: fixed;
     background-size: cover
+    
 
 }
 .mr{
