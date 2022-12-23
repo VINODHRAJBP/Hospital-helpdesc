@@ -72,20 +72,20 @@ margin:30px 10px;
   }
   @keyframes glowing {
     0% {
-      background-color: #2ba805;
-      box-shadow: 0 0 5px #2ba805;
+      background-color: #758670;
+      box-shadow: 0 0 5px #727c6e;
     }
     50% {
-      background-color: #49e819;
-      box-shadow: 0 0 20px #49e819;
+      background-color: #5b6857;
+      box-shadow: 0 0 20px #9da59b;
     }
     100% {
-      background-color: #2ba805;
-      box-shadow: 0 0 5px #2ba805;
+      background-color: #a6b4a2;
+      box-shadow: 0 0 5px #898b88;
     }
   }
   .button {
-    animation: glowing 1300ms infinite;
+    animation: glowing 13000ms infinite;
   }
 /*  */
   .buttons {
@@ -104,20 +104,20 @@ margin:30px 10px;
   }
   @keyframes glowings {
     0% {
-      background-color: #a80505;
-      box-shadow: 0 0 5px #a80505;
+      background-color: #db7676;
+      box-shadow: 0 0 5px #bb5757;
     }
     50% {
-      background-color: #a80505;
-      box-shadow: 0 0 20px #a80505;
+      background-color: #ce6e6e;
+      box-shadow: 0 0 20px #ac4545;
     }
     100% {
-      background-color: #a80505;
-      box-shadow: 0 0 5px #a80505;
+      background-color: #d35656;
+      box-shadow: 0 0 5px #c95858;
     }
   }
   .buttons {
-    animation: glowings 1300ms infinite;
+    animation: glowings 13000ms infinite;
   }
 
 

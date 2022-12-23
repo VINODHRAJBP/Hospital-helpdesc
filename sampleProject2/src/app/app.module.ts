@@ -19,6 +19,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { CartComponent } from './Component/cart/cart.component';
 import { RegisterComponent } from './register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -40,13 +43,13 @@ import { RegisterComponent } from './register/register.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
+        MatSlideToggleModule,
         // AngularFireModule.initializeApp(environment.firebase),
         FormsModule,
         HttpClientModule,
-        // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-        // and returns simulated server responses.
-        // Remove it when a real server is ready to receive requests.
-        // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
+        BrowserAnimationsModule,
+        MatSnackBarModule
+        
         
     ]
 })

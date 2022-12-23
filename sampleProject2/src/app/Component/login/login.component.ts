@@ -2,12 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { ValidateService } from 'src/app/validate.service';
 import { Router } from '@angular/router';
 
+
+
+
+
+///////// matirial ui
+import { inject} from '@angular/core';
+import {MatSnackBar, MatSnackBarRef} from '@angular/material/snack-bar';
+
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+ 
 })
 export class LoginComponent implements OnInit {
+
+
+
+  ///
+
+  
 
   email: string = '';
   password: string = '';
@@ -60,7 +77,12 @@ export class LoginComponent implements OnInit {
 
   }
 
-
-
-
 }
+
+
+
+
+
+
+
+
