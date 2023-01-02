@@ -5,14 +5,13 @@
         <h1 class="font-italic text-warning  font-weight-bold w3-container w3-center w3-animate-left ">Welcome to user dashboard...</h1>
       </div>
       <div class="col-sm-6 d-flex flex-row-reverse p-4">
-
-        <a class="btn  btn-outline-warning text-secondary text-lg text-light buttonnav" (click)="logout()">Log Out</a>
+        <a class="btn  btn-outline-warning text-secondary text-lg text-light buttonnav" routerLink="/login">Log Out</a>
         <!-- <button class="btn btn-info btn-lg text-white text-lg mr" (click)="returnBook()">Return Book</button> -->
-        <a class="btn btn-outline-warning  text-lg mr text-light buttonnav" (click)="com()">cart <span
+        <a class="btn btn-outline-warning  text-lg mr text-light buttonnav" (click)="com()">cart<span
             class="badge bg-warning">{{c}}</span></a>
 
         <a class="btn btn-outline-warning  text-lg mr text-light buttonnav" (click)="show()">Showbooks</a>
-
+          <a class="btn btn-outline-warning  text-lg mr text-light buttonnav"  (click)="win()">Play&win</a>
       </div>
     </div>
   </div>
@@ -79,7 +78,7 @@
           </div><br>
 
           
-            <p class="lead m-3 mt-4 text-dark">
+            <p class="lead m-3 mt-4 text-dark text-justify">
            
               "Top 45 Most Beautiful Quotations About Libraries, Librarians, Cataloging, Classification  Catalogers, and Library and Information Science. Famous quotes describing why libraries and cataloging 
             important and librarians  and catalogers indispensable. Includes inspirational and motivational quotes from famous personalities for personality development, 

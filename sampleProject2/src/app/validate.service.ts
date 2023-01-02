@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { AngularFireAuth } from '@angular/fire/compat/auth'
 import { Router } from '@angular/router';
-import { book, admin,buy } from './book';
+import { book, admin,buy, play } from './book';
 import { catchError, map, tap, } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { MessageService } from './message.service'
@@ -28,9 +28,9 @@ export class ValidateService {
       .pipe(map((get) => {
         const product = []
         for (const key in get) {
-          if (get.hasOwnProperty(key)) {
+          // if (get.hasOwnProperty(key)) {
             product.push({ ...get[key], id: key })
-          }
+          // }
         }
         return product
       }))
@@ -329,13 +329,31 @@ buyers:buy[]=[]
   clearLog() {
     this.msg = []
   }
+
+
+
+// play and win
+  qns:any=[]
+  getqns(){
+    this.http.get<{ [key: string]:play}>('https://login-9a0c9-default-rtdb.firebaseio.com/play.json')
+    .pipe(map(a=>{
+      const data=[]
+      for(const key in a){
+        data.push({...a[key],id:key})
+      }
+      return data
+    })).subscribe(a=>{this.qns=a,
+      console.log(this.qns);
+      
+    })
+  }
 }
 
 
 
 
 
-/** PUT: update the hero on the server */
+
 
 
 

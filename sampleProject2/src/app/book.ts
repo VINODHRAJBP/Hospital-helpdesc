@@ -14,3 +14,9 @@ export interface admin{
 export interface buy{
     data:string
 }
+export interface play{
+    id:string
+    qn:string,
+    op1:string,
+    op2:string
+}

@@ -19,8 +19,7 @@ export class UserDashboardComponent implements OnInit {
   searched = false
   return = false
   detail = false
-
-  showBook = false
+  showBook = true
   count = 10
 
   books: book[] = []
@@ -29,13 +28,15 @@ export class UserDashboardComponent implements OnInit {
     this.dispBooks()
     this.valid.getbooks()
     this.c=this.valid.c
+    this.books=this.valid.books
+    this.valid.getqns()
   }
 c=0
 
   show() {
     this.searched=false
     this.dispBooks()
-    this.showBook = !this.showBook
+    this.showBook=!this.showBook
     this.select=false
   }
   dispBooks(){
@@ -66,9 +67,6 @@ c=0
     this.searched = !this.searched
   }
 
-  logout() {
-    this.location.back()
-  }
 
   details() {
     this.detail = !this.detail
@@ -163,6 +161,9 @@ remove(val:book){
     this.valid.cartbook.splice(this.valid.cartbook.indexOf(val),1)
 }
   
+win(){
+  this.rou.navigate(['/play'])
+}
 
 }
 

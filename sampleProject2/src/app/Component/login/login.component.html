@@ -9,12 +9,12 @@
 
                             <h4 class="text-dark ">Admin Login</h4>
                             <hr />
-                            <div class="">
+                            <div class="form-group">
                                 <label for="email" class="form-label lead text-danger">Email address</label>
-                                <input #v="ngModel" email class="form-control" name="email" [(ngModel)]="email">
+                                <input #v="ngModel" email class="form-control" name="email" type="email" [(ngModel)]="email">
                                 <span class="form-text text-danger" *ngIf="v.invalid">plz enter valid email</span>
                                 <p class="text-dark form-text">We'll never share your email with anyone else. </p>
-                                <label for="Password" class="form-label lead text-danger pt-3">Password</label>
+                                <label for="Password"  class="form-label lead text-danger pt-3">Password</label>
                                 <input #ii="ngModel" type="password"  class="form-control" minlength="6" name="password"
                                     [(ngModel)]="password">
                                 <span *ngIf="ii.touched && ii.invalid">Min length 6 required</span><br>

@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.valid.loginAdmin()
     this.valid.loginuser()
+    this.valid.getbooks()
   }
 
   adminsignIn(val:any) {

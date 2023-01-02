@@ -1,0 +1,44 @@
+<div class="navbg p-1 bg-dark">
+    <button class="btn btn-outline-warning mt-3 text-light " routerLink="/user-dashboard">Go Back</button>
+    <div class="col-sm-6 p-1">
+        <h1 class="font-italic text-warning  font-weight-bold w3-container w3-center w3-animate-left ">Welcome to
+            play
+            and win zone.... </h1>
+    </div>
+
+</div>
+
+<div class=" bg ">
+<div class="p-3">
+    <h1 class="lead text-warning pt-3">Instructions For Attending Quiz</h1>
+    <hr class="col-sm-4 text-warning">
+    <p class="lead">You will have 5 qns</p>
+    <p class="lead">Must ttend all qns</p>
+    <p class="lead">you must score above 3 for win a book</p><br>
+    <h1 class="text text-warning text-center">Score: {{count}}</h1>
+
+    <a (click)="start()">click here to start the quiz</a><br><br>
+
+    <div *ngIf="show">
+        <div class="form-group pt-4" *ngFor="let a of qns">
+            <p class="lead">{{a.qn}}</p>
+            <select #ii class="form-control bg-light" id="sel1">
+                <option>select</option>
+                <option>{{a.op1}}</option>
+                <option>{{a.op2}}</option>
+            </select>
+            <button (click)="check(ii.value,a)" class="btn btn-outline-warning">save Answer</button>
+        </div>
+    </div>
+    <div *ngIf="coupan">
+        <h1 class="lead text-center text-success">Hurray... You Won The Game </h1>
+        <h2 class="lead text-center text-success">Use this coupan to avail offer at next time</h2>
+        <h1 class="lead text-center text-warning fw-bolder">Coupan: HealthSignz</h1>
+    </div>
+
+    <div *ngIf="coupan1">
+        <h1 class="lead text-center text-danger">Sorry better luck next time....</h1>
+    </div>
+</div>
+</div>
+

@@ -7,6 +7,7 @@ import { LoginComponent } from './Component/login/login.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { CartComponent } from './Component/cart/cart.component';
 import { RegisterComponent } from './register/register.component';
+import { PlayComponent } from './play/play.component';
  
 const routes: Routes = [
   {
@@ -18,7 +19,6 @@ const routes: Routes = [
   {
     path: 'admin-dashboard', component: AdminDashboardComponent
   },
-
   {
     path: 'login', component: LoginComponent
   },
@@ -30,7 +30,11 @@ const routes: Routes = [
   },
   {
     path: 'cart', component: CartComponent
+  },
+  {
+    path:'play', component: PlayComponent
   }
+ 
 ];
 
 @NgModule({

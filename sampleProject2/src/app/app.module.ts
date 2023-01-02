@@ -22,6 +22,7 @@ import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { PlayComponent } from './play/play.component';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
         NavbarComponent,
         DashboardComponent,
         CartComponent,
-        RegisterComponent
+        RegisterComponent,
+        PlayComponent,
+    
     ],
     providers: [],
     bootstrap: [AppComponent],
