@@ -106,7 +106,7 @@
                   </span>
                 </div>
               </div>
-              <div *ngFor="let a of button">
+              <div *ngFor="let a of valid.cartbook">
                 <div *ngIf="book.name==a.name;then content">here is ignored</div>
                 <ng-template #content> <p class="delete btn btn-danger btn-lg text-white buttons" (click)="remove(book)">Remove</p></ng-template>
                 <!-- <div *ngIf="book.name==a.name;then i else"></div> -->

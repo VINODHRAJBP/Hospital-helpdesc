@@ -85,7 +85,6 @@ c=0
     this.loc.back()
   }
 
-
   delete(book:book){
     for(let a of this.selbook){
       if(book==a){
@@ -94,6 +93,21 @@ c=0
       }
     }
   }
+
+// discount
+a=''
+dis=false
+cou='HealthSignz'
+cou1=''
+discount=false
+couverify(a:any){
+this.cou1=a
+}
+
+disc(){
+  this.discount=true
+  this.a=''
+}
 
   
 

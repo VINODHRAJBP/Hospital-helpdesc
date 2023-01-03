@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class UserDashboardComponent implements OnInit {
 
-  constructor(private valid: ValidateService, private location: Location, private rou: Router) { }
+  constructor(public valid: ValidateService, private location: Location, private rou: Router) { }
   email: string = '';
   password: string = '';
   searched = false
@@ -32,7 +32,6 @@ export class UserDashboardComponent implements OnInit {
     this.valid.getqns()
   }
 c=0
-
   show() {
     this.searched=false
     this.dispBooks()
@@ -66,8 +65,6 @@ c=0
     // this.showBook=false
     this.searched = !this.searched
   }
-
-
   details() {
     this.detail = !this.detail
   }
@@ -142,12 +139,12 @@ select=false
 
 
   // CART DETAILS
-  button:book[]=[]
+ 
   cart(book: book) {
     this.valid.c++
     this.c=this.valid.c
     this.valid.addCart(book)
-    this.button=this.valid.cartbook
+    
   }
 
 

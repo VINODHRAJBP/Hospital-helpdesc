@@ -38,6 +38,17 @@
                     </thead>
                 </table>
                 <h2>Total Price: {{totalPrice}}</h2>
+                <div *ngIf="discount">
+                <h2 >Discounted Price : {{totalPrice*0.2}}</h2>
+                <h2 >pay: {{totalPrice-(totalPrice*0.2)}}</h2>
+            </div>
+            </div>
+            <div>
+                <a (click)="dis=!dis">Do you have coupan?</a>
+             <div *ngIf="dis">
+                <input #i type="text" (keyup)="couverify(i.value)" [(ngModel)]="a">
+                <button [disabled]="cou1!=cou" (click)="disc()">submit</button>
+            </div>
             </div>
 
             <div class=" justify-content-center ">
@@ -47,7 +58,7 @@
             </div>
             <!-- <div *ngFor='let message of valid.buyers'> </div> -->
             <div class="p-5  ">
-                <h6 class="lead font-weight-bold justify-content-center mrgn" *ngFor="let mmm of valid.msg">{{mmm}}</h6>
+                <h5 class="lead font-weight-bold justify-content-center mrgn" *ngFor="let mmm of valid.msg">{{mmm}}</h5>
             </div>
             <!-- <app-message></app-message> -->
         </div>
